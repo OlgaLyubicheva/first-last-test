@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'TT Travels';
+  font-style: normal;
+  font-weight: 300;
+  src:
+    url('./assets/fonts/TTTravels-Regular.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Schnyder Cond XL Demi';
+  font-style: normal;
+  font-weight: 600;
+  src:
+    url('./assets/fonts/SchnyderXCondLDemi.woff2') format('woff2'),
+    url('./assets/fonts/Schnyder_X_Cond_L_Demi.woff') format('woff');
+}
+
