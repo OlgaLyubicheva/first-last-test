@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 300;
   src:
-    url('./assets/fonts/TTTravels-Regular.ttf') format('ttf');
+    url('./assets/fonts/TTTravels-Regular.ttf');
 }
 
 @font-face {

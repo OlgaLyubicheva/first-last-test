@@ -3,7 +3,7 @@
     <div class="scene__layer-wraper">
       <div
         v-for="(item, index) in images"
-        v-bind:key="index"
+        v-bind:key="index + 1"
         class="scene__layer layer1"
         v-bind:class="{active : currentIndex == index}"
         :style="{ backgroundImage: 'url('+ item[0] +')' }"
@@ -11,7 +11,7 @@
 
       <div
         v-for="(item, index) in images"
-        v-bind:key="index"
+        v-bind:key="index + 2"
         class="scene__layer layer2"
         v-bind:class="{active : currentIndex == index}"
         :style="{ backgroundImage: 'url('+ item[1] +')' }"
@@ -19,7 +19,7 @@
 
       <div
         v-for="(item, index) in images"
-        v-bind:key="index"
+        v-bind:key="index + 3"
         class="scene__layer layer3"
         v-bind:class="{active : currentIndex == index}"
         :style="{ backgroundImage: 'url('+ item[2] +')' }"
@@ -39,17 +39,19 @@ export default {
       ['/img/foto3.df0aa40c.png', '/img/foto1.016989f2.jpg', '/img/foto2.41279e2e.png'],
     ]});
   },
-  mounted: function () {
-    const parallax = (event) => {
+  methods: {
+    parallax: function (event) {
       document.querySelector('.scene__layer-wraper').style.transform = `translate(${-event.clientX/20}px, ${-event.clientY/15}px)`;
-    }
+    },
 
-    const whatIndex = () => {
+    whatIndex: function () {
       const index = document.querySelector('.swiper-slide-active').dataset.swiperSlideIndex;
       if (index && index !== this.currentIndex) {this.currentIndex = index}
-    };
-    document.addEventListener('mousemove', parallax);
-    document.querySelector('.swiper-wrapper').addEventListener('mouseover', whatIndex);
+    }
+  },
+  mounted: function () {
+    document.addEventListener('mousemove', this.parallax);
+    document.querySelector('.swiper-container').addEventListener('mousemove', this.whatIndex);
   }
 }
 </script>

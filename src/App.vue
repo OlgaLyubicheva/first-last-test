@@ -7,6 +7,8 @@
     <Menu msg=""/>
     <BackgroundScene />
     <Title />
+
+    <span class="drag-me">Drag me</span>
   </header>
 </template>
 
@@ -58,5 +60,26 @@ body {
   left: 40px;
   z-index: 9;
 }
+
+.drag-me {
+    position: absolute;
+    top: -5px;
+    left: 15px;
+    width: 40px;
+    height: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+
+    font-family: 'TT Travels', 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 8px;
+    line-height: 10px;
+  
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    color: #000000;
+  }
 
 </style>
