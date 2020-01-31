@@ -47,6 +47,7 @@ export default {
       width: 60vw;
       height: 40vh;
       overflow: visible;
+      cursor: url('../assets/cursor.svg'), auto;
     }
 
     &-wrapper {
@@ -75,8 +76,6 @@ export default {
       -webkit-text-stroke: 0.837209px #580300;
       color: transparent;
       transition: color 1s ease-in;
-
-      cursor: url('../assets/cursor.svg'), auto;
     }
 
     &-slide-active {

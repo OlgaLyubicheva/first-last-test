@@ -34,9 +34,9 @@ export default {
   data: function () {
     return ({currentIndex: 0,
     images: [
-      ['/img/foto1.016989f2.jpg', '/img/foto2.41279e2e.png', '/img/foto3.df0aa40c.png'],
-      ['/img/foto2.41279e2e.png', '/img/foto3.df0aa40c.png', '/img/foto1.016989f2.jpg'],
-      ['/img/foto3.df0aa40c.png', '/img/foto1.016989f2.jpg', '/img/foto2.41279e2e.png'],
+      ['img/foto1.016989f2.jpg', 'img/foto2.41279e2e.png', 'img/foto3.df0aa40c.png'],
+      ['img/foto2.41279e2e.png', 'img/foto3.df0aa40c.png', 'img/foto1.016989f2.jpg'],
+      ['img/foto3.df0aa40c.png', 'img/foto1.016989f2.jpg', 'img/foto2.41279e2e.png'],
     ]});
   },
   methods: {
@@ -88,7 +88,6 @@ export default {
       height: inherit;
       transform: rotate(1.5deg);
 
-      background: url('../assets/foto1.jpg') no-repeat, #E5E5E5;
       background-size: cover;
       background-position: center;
     }
@@ -101,7 +100,6 @@ export default {
       height: 226px;
       transform: translateZ(-1px) rotate(1.1deg) scale(2);
 
-      background: url('../assets/foto2.png') no-repeat, #E5E5E5;
       background-size: 240%;
       background-position: center -50px;
     }
@@ -114,7 +112,6 @@ export default {
       height: 162px;
       transform: rotate(0.53deg) translateZ(0.2px) scale(0.8);
 
-      background: url('../assets/foto3.png') no-repeat, #E5E5E5;
       background-size: 100%;
       background-position: center -70px;
     }
